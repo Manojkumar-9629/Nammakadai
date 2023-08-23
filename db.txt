@@ -1,4 +1,6 @@
- Create the Company table
+Create database nammakadai;
+Use nammakadai;
+--Create the Company table
 CREATE TABLE Company (
     company_name VARCHAR(255) PRIMARY KEY,
     cash_balance DECIMAL(10, 2) NOT NULL
