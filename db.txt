@@ -1,0 +1,37 @@
+ Create the Company table
+CREATE TABLE Company (
+    company_name VARCHAR(255) PRIMARY KEY,
+    cash_balance DECIMAL(10, 2) NOT NULL
+);
+
+-- Insert initial data into the Company table
+INSERT INTO Company (company_name, cash_balance) VALUES ('namakadai', 1000.00);
+
+-- Create the Item table
+CREATE TABLE Item (
+    item_id INT AUTO_INCREMENT PRIMARY KEY,
+    item_name VARCHAR(255) NOT NULL,
+    qty INT DEFAULT 0
+);
+
+-- Create the Purchase table
+CREATE TABLE Purchase (
+    purchase_id INT AUTO_INCREMENT PRIMARY KEY,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    item_id INT NOT NULL,
+    qty INT NOT NULL,
+    rate DECIMAL(10, 2) NOT NULL,
+    amount DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (item_id) REFERENCES Item (item_id)
+);
+
+-- Create the Sales table
+CREATE TABLE Sales (
+    sales_id INT AUTO_INCREMENT PRIMARY KEY,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    item_id INT NOT NULL,
+    qty INT NOT NULL,
+    rate DECIMAL(10, 2) NOT NULL,
+    amount DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (item_id) REFERENCES Item (item_id)
+);

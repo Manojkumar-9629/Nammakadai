@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Nammakadai</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-light ">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"><i class="bi bi-bag-heart-fill" id="logos"></i>&nbsp;&nbsp;NamaKadai</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
+                <ul class="navbar-nav  mt-2 mt-lg-0">
+                    <!--<li class="nav-item">
+                        <a class="nav-link active" href="#" aria-current="page">Home <span class="visually-hidden">(current)</span></a>
+                    </li>-->
+                    <li>
+                      <a class="cashup" href="{{ url_for('view_item') }}">view item</a>
+                    </li>
+                    <li>
+                        <a class="cashup" href="#">Cash Balance: Rs.{{ cash_balance }}</a>
+                    </li>
+                   
+                </ul>
+               
+            </div>
+      </div>
+    </nav>
+    <br><br>
+  </header>
+  <main class="container-fluid">
+      <div class="row justify-content-center  g-2">
+        <div class="col" style="margin-left: 2%;">
+          <div ><span class=" discover p-2">Namakadai</span><span class="placetxt">a Place You'll Love to shop</span></div>
+          <div style="margin-left: 2%;" class="mt-2"><small class="weoffer">We offer comprehensive shopping experiences for buying, selling, and exploring products to meet all your needs</small></div>
+           
+          <div class="mt-2"><a name="" id="" class="btn explore mt-2 " href="{{ url_for('add_purchase') }}" role="button" style="margin-left: 2%;" >Purchase item</a>
+            <a name="" id="" class="btn explore mt-2 " href="{{ url_for('add_sale') }}" role="button" style="margin-left: 2%;" >Sale item</a></div>
+        </div>
+        <div class="col"><img src="{{ url_for('static', filename='im1.jpg') }}" class="img-fluid rounded-top" alt=""></div>
+        
+      </div>
+      <!--<h2>Cash Balance: Rs.{{ cash_balance }}</h2>-->
+    <!--<ul>
+      <li><a href="{{ url_for('add_item') }}">Add Item</a></li>
+      <li><a href="{{ url_for('add_purchase') }}">Add Purchase</a></li>
+      <li><a href="{{ url_for('add_sale') }}">Add sale</a></li>
+      
+      
+  </ul>-->
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
